@@ -3,12 +3,9 @@
 # Deploy Script — Skripsi Wiki (Quartz)
 #
 # Cara pakai:
-#   1. Buka git-bash di folder D:\Skripsi_Wiki\quartz\
-#   2. Jalankan: ./deploy.sh
-#
-# Yang dilakukan:
-#   - Build static site dari wiki/ (via junction)
-#   - Deploy ke GitHub Pages (atau hosting tujuan)
+#   1. Edit notes di Obsidian
+#   2. Buka git-bash di folder D:\Skripsi_Wiki\quartz\
+#   3. Jalankan: ./deploy.sh
 # ============================================================
 
 set -e
@@ -17,12 +14,31 @@ echo "🔄 Building Skripsi Wiki..."
 npx quartz build
 
 echo ""
-echo "✅ Build selesai! File siap deploy di: public/"
+echo "📤 Deploying to GitHub Pages..."
 echo ""
-echo "📤 Untuk deploy ke GitHub Pages:"
-echo "   npx quartz sync"
+
+# Save current branch
+CURRENT_BRANCH=$(git branch --show-current)
+
+# Build to gh-pages branch
+git checkout gh-pages
+rm -rf concepts/ models/ outlines/ preparation/ research_notes/ todo/
+rm -f 404.html index.html index.css index.xml log.html sitemap.xml
+rm -f favicon.ico postscript.js prescript.js .nojekyll
+cp -r public/* .
+cp public/.* . 2>/dev/null || true
+touch .nojekyll
+rm -rf public/
+
+git add -A
+git commit --allow-empty -m "Deploy: $(date +'%Y-%m-%d %H:%M')"
+git push origin gh-pages
+
+# Back to main
+git checkout "$CURRENT_BRANCH"
+
 echo ""
-echo "📤 Atau upload folder public/ ke Netlify/Vercel manual"
+echo "✅ Selesai! Website diupdate:"
+echo "   https://asdikaputra.github.io/skripsi-wiki/"
 echo ""
-echo "📝 Local preview:"
-echo "   npx quartz build --serve --port 8080"
+echo "⏳ Tunggu 1-2 menit sampai perubahan live."
