@@ -1,81 +1,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
-    <loc>https://skripsi-wiki.netlify.app/concepts/fundamental/Bayesian-Inference</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
+    <loc>https://skripsi-wiki.netlify.app/SCHEMA</loc>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://skripsi-wiki.netlify.app/concepts/analisis_fungsi_partisi_gibbs</loc>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/concepts/fundamental/Distribusi_Gibbs</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
-  </url><url>
-    <loc>https://skripsi-wiki.netlify.app/concepts/fundamental/Evaluasi_Word_Embedding</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/concepts/fundamental/Fungsi_Homogen_Berderajat_Dua</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/concepts/fundamental/Gaussian_dan_iid</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/concepts/fundamental/Improper_Prior</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/concepts/fundamental/Integral_Fungsi_Partisi</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/concepts/fundamental/Matriks_Ko-okurensi_dan_PPMI</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/concepts/fundamental/Negative_Log_Likelihood</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/concepts/fundamental/Optimasi_Berbasis_Gradien</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/concepts/major/Algoritma_Adam</loc>
     <lastmod>2026-05-12T13:29:01.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/concepts/major/Bayesian_dan_MAP</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://skripsi-wiki.netlify.app/concepts/major/Evaluasi_Word_Embedding</loc>
+    <lastmod>2026-05-12T13:54:03.543Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/concepts/major/Formulasi_Probabilistik_W2VPred</loc>
     <lastmod>2026-05-12T13:29:01.000Z</lastmod>
   </url><url>
-    <loc>https://skripsi-wiki.netlify.app/concepts/major/Hierarchical_and_Empirical_Bayes</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
-  </url><url>
-    <loc>https://skripsi-wiki.netlify.app/concepts/major/Integral-Gaussian</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
-  </url><url>
     <loc>https://skripsi-wiki.netlify.app/concepts/major/JMAP</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
-  </url><url>
-    <loc>https://skripsi-wiki.netlify.app/concepts/major/Model-Hirarki-W2VPred</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/concepts/major/Reparameterisasi_Numerik</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/concepts/major/Strategi_Optimasi_JMAP</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
-  </url><url>
-    <loc>https://skripsi-wiki.netlify.app/concepts/major/analisis_fungsi_partisi_gibbs</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/concepts/major/penjabaran_integral_partisi_zs</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/concepts/major/uncertainty_weighted_loss</loc>
     <lastmod>2026-05-12T13:29:01.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/log</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/models/W2VPred</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/models/W2VPred_MAP</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/outlines/BAB2_Outline</loc>
     <lastmod>2026-05-12T13:29:01.000Z</lastmod>
@@ -107,17 +98,26 @@
     <loc>https://skripsi-wiki.netlify.app/preparation/Jawaban_Kategori_B</loc>
     <lastmod>2026-05-12T13:29:01.000Z</lastmod>
   </url><url>
+    <loc>https://skripsi-wiki.netlify.app/raw/papers/bamler2017dynamic</loc>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://skripsi-wiki.netlify.app/raw/papers/kendall2018multi</loc>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://skripsi-wiki.netlify.app/raw/papers/mohammaddjafari1996joint</loc>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://skripsi-wiki.netlify.app/research_notes/Bayesian_Hierarchical_Concept</loc>
     <lastmod>2026-05-12T13:29:01.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/research_notes/Gibbs_Reference_Mapping</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/research_notes/JMAP_Reference_Mapping</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/research_notes/MAP_Reference_Mapping</loc>
-    <lastmod>2026-05-12T13:29:01.000Z</lastmod>
+    <lastmod>2026-05-11T17:00:00.000Z</lastmod>
   </url><url>
     <loc>https://skripsi-wiki.netlify.app/todo/progress_bab2</loc>
     <lastmod>2026-05-12T13:29:01.000Z</lastmod>
