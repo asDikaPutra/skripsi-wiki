@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr"><head><title>Jawaban_Kategori_B — W2VPred-MAP</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:wght@400;700&amp;family=Source Serif 4:ital,wght@0,400;0,600;1,400;1,600&amp;family=JetBrains Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Skripsi Wiki"/><meta property="og:title" content="Jawaban_Kategori_B — W2VPred-MAP"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Jawaban_Kategori_B — W2VPred-MAP"/><meta name="twitter:description" content="Jawaban Sidang — Kategori B: Formulasi Matematis &amp; Turunan Skripsi: Reformulasi Probabilistik W2VPred menggunakan Joint Maximum A Posteriori (JMAP) Bahasa: Indonesia akademik formal Jumlah: 20 jawaban (B.1 – B.20) B.1 — Derivasi JF dari Likelihood Gaussian Pertanyaan: Jelaskan bagaimana fungsi l..."/><meta property="og:description" content="Jawaban Sidang — Kategori B: Formulasi Matematis &amp; Turunan Skripsi: Reformulasi Probabilistik W2VPred menggunakan Joint Maximum A Posteriori (JMAP) Bahasa: Indonesia akademik formal Jumlah: 20 jawaban (B.1 – B.20) B.1 — Derivasi JF dari Likelihood Gaussian Pertanyaan: Jelaskan bagaimana fungsi l..."/><meta property="og:image:alt" content="Jawaban Sidang — Kategori B: Formulasi Matematis &amp; Turunan Skripsi: Reformulasi Probabilistik W2VPred menggunakan Joint Maximum A Posteriori (JMAP) Bahasa: Indonesia akademik formal Jumlah: 20 jawaban (B.1 – B.20) B.1 — Derivasi JF dari Likelihood Gaussian Pertanyaan: Jelaskan bagaimana fungsi l..."/><meta property="og:image" content="https://skripsi-wiki.netlify.app/static/og-image.png"/><meta property="og:image:url" content="https://skripsi-wiki.netlify.app/static/og-image.png"/><meta name="twitter:image" content="https://skripsi-wiki.netlify.app/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="skripsi-wiki.netlify.app"/><meta property="og:url" content="https://skripsi-wiki.netlify.app/preparation/Jawaban_Kategori_B"/><meta property="twitter:url" content="https://skripsi-wiki.netlify.app/preparation/Jawaban_Kategori_B"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="Jawaban Sidang — Kategori B: Formulasi Matematis &amp; Turunan Skripsi: Reformulasi Probabilistik W2VPred menggunakan Joint Maximum A Posteriori (JMAP) Bahasa: Indonesia akademik formal Jumlah: 20 jawaban (B.1 – B.20) B.1 — Derivasi JF dari Likelihood Gaussian Pertanyaan: Jelaskan bagaimana fungsi l..."/><meta name="generator" content="Quartz"/><link href="../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiRDpcXFNrcmlwc2lfV2lraVxccXVhcnR6XFxxdWFydHpcXGNvbXBvbmVudHNcXHN0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://skripsi-wiki.netlify.app/index.xml"/></head><body data-slug="preparation/Jawaban_Kategori_B"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">Skripsi Wiki</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Cari</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Cari sesuatu" placeholder="Cari sesuatu"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Mode Gelap"><title>Mode Gelap</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Mode Terang"><title>Mode Terang</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Mode Pembaca"><title>Mode Pembaca</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.name!==\&quot;preparation\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-44"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Penjelajah</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-44" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../preparation/">preparation</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Jawaban_Kategori_B</a></div></nav><h1 class="article-title">Jawaban_Kategori_B</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-12T13:29:01.000Z">12 Mei 2026</time><span>26 menit baca</span></p></div></div><article class="popover-hint"><h1 id="jawaban-sidang--kategori-b-formulasi-matematis--turunan">Jawaban Sidang — Kategori B: Formulasi Matematis &amp; Turunan<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#jawaban-sidang--kategori-b-formulasi-matematis--turunan" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p><strong>Skripsi:</strong> Reformulasi Probabilistik W2VPred menggunakan Joint Maximum A Posteriori (JMAP)
+<strong>Bahasa:</strong> Indonesia akademik formal
+<strong>Jumlah:</strong> 20 jawaban (B.1 – B.20)</p>
+</blockquote>
+<hr/>
+<h2 id="b1--derivasi-jf-dari-likelihood-gaussian">B.1 — Derivasi JF dari Likelihood Gaussian<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b1--derivasi-jf-dari-likelihood-gaussian" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>Pertanyaan:</strong> Jelaskan bagaimana fungsi likelihood Gaussian diturunkan menjadi JF = LF/(2σF²) + (T·V²)log σF. Tunjukkan setiap langkah negatif log-likelihood dan konstanta yang diabaikan.</p>
+<p><strong>Jawaban:</strong></p>
+<p><strong>Langkah 1 — Model Observasi.</strong> Matriks PPMI Yt direkonstruksi melalui inner-product embedding dan galat Gaussian:</p>
+<p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">ij</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1352em;vertical-align:-0.2861em;"></span><span class="mopen">[</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.109em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-2.453em;margin-left:-0.109em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">⊤</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">]</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">ij</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7167em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal">ε</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">ij</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">ε</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">ij</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0894em;vertical-align:-0.2753em;"></span><span class="mord mathcal" style="margin-right:0.14736em;">N</span><span class="mopen">(</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-2.4247em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">F</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2753em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></p>
+<p><strong>Langkah 2 — Likelihood per Entri.</strong> Karena ε ~ N(0, σF²), probabilitas satu entri observasi adalah:</p>
+<p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mord mathnormal">p</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">ij</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.109em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">F</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.8091em;vertical-align:-0.65em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.551em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord sqrt mtight"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9128em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mtight" style="padding-left:0.833em;"><span class="mord mtight">2</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span><span style="top:-2.8728em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail mtight" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1272em;"><span></span></span></span></span></span><span class="mspace mtight" style="margin-right:0.1952em;"></span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3567em;margin-left:-0.0359em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">F</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1433em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5493em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">exp</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord">−</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1591em;"><span style="top:-2.6264em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8051em;"><span style="top:-2.1607em;margin-left:-0.0359em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">F</span></span></span><span style="top:-2.8448em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3393em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.5102em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3281em;"><span style="top:-2.357em;margin-left:-0.2222em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">ij</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2819em;"><span></span></span></span></span></span></span><span class="mbin mtight">−</span><span class="mopen mtight">[</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2963em;"><span style="top:-2.357em;margin-left:-0.109em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.927em;"><span style="top:-2.214em;margin-left:-0.109em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">t</span></span></span><span style="top:-2.931em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">⊤</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286em;"><span></span></span></span></span></span></span><span class="mclose mtight"><span class="mclose mtight">]</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3281em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">ij</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2819em;"><span></span></span></span></span></span></span><span class="mclose mtight"><span class="mclose mtight">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-2.931em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.6111em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span></span></span></span></p>
+<p><strong>Langkah 3 — Likelihood Gabungan.</strong> Dengan asumsi i.i.d. pada seluruh entri (t = 1..T, i = 1..V, j = 1..V), likelihood total adalah hasil kali:</p>
+<p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">p</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∣</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">F</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.8091em;vertical-align:-0.65em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∏</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9812em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2997em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∏</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9812em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.22222em;">V</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2997em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∏</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9812em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.22222em;">V</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4358em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.551em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord sqrt mtight"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9128em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mtight" style="padding-left:0.833em;"><span class="mord mtight">2</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span><span style="top:-2.8728em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail mtight" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1272em;"><span></span></span></span></span></span><span class="mspace mtight" style="margin-right:0.1952em;"></span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3567em;margin-left:-0.0359em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">F</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1433em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5493em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">exp</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord">−</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1591em;"><span style="top:-2.6264em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8051em;"><span style="top:-2.1607em;margin-left:-0.0359em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">F</span></span></span><span style="top:-2.8448em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3393em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.5102em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3281em;"><span style="top:-2.357em;margin-left:-0.2222em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">ij</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2819em;"><span></span></span></span></span></span></span><span class="mbin mtight">−</span><span class="mopen mtight">[</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2963em;"><span style="top:-2.357em;margin-left:-0.109em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.927em;"><span style="top:-2.214em;margin-left:-0.109em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight">t</span></span></span><span style="top:-2.931em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">⊤</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286em;"><span></span></span></span></span></span></span><span class="mclose mtight"><span class="mclose mtight">]</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3281em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">ij</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2819em;"><span></span></span></span></span></span></span><span class="mclose mtight"><span class="mclose mtight">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-2.931em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.6111em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span></span></span></span></p>
+<p><strong>Langkah 4 — Negatif Log-Likelihood.</strong> Transformasi ke bentuk penjumlahan:</p>
+<span class="katex-error" title="ParseError: KaTeX parse error: Expected 'EOF', got '&amp;' at position 28: …d U, \sigma_F) &amp;̲= \sum_{t=1}^T …" style="color:#cc0000;">-\ln p(Y \mid U, \sigma_F) &amp;= \sum_{t=1}^T \sum_{i=1}^V \sum_{j=1}^V \left[ \frac{(Y_{t,ij} - [U_t U_t^\top]_{ij})^2}{2\sigma_F^2} + \ln(\sqrt{2\pi}\,\sigma_F) \right] \\[4pt]
+&amp;= \frac{1}{2\sigma_F^2} \underbrace{\sum_{t=1}^T \sum_{i=1}^V \sum_{j=1}^V (Y_{t,ij} - [U_t U_t^\top]_{ij})^2}_{=: L_F} + (T \cdot V^2) \ln \sigma_F + \frac{T V^2}{2} \ln(2\pi)
+\end{aligned}$$
+
+**Langkah 5 — Definisi JF.** Komponen objektif yang relevan untuk optimasi hanyalah suku yang bergantung pada U atau σF. Konstanta $(T V^2 / 2)\ln(2\pi)$ tidak bergantung pada parameter dan dapat diabaikan:
+
+$$J_F(U, \sigma_F) = \frac{L_F}{2\sigma_F^2} + (T \cdot V^2) \ln \sigma_F$$
+
+di mana LF = Σt ‖Yt − UtUtᵀ‖F² adalah *Fidelity Loss* deterministik original.
+
+---
+
+## B.2 — Peran σF² dalam JF
+
+**Pertanyaan:** Mengapa suku (T·V²) log σF muncul? Apa implikasinya terhadap estimasi σF² saat optimasi bersama parameter U?
+
+**Jawaban:**
+
+Suku $(T \cdot V^2) \ln \sigma_F$ muncul dari dua sumber:
+1. **Faktor normalisasi distribusi Gaussian** — setiap entri observasi menyumbang faktor $1/(\sqrt{2\pi}\sigma_F)$, sehingga setelah negatif logaritma muncul $(T V^2) \ln \sigma_F$.
+2. **Suku ini berfungsi sebagai regularisasi alami** — mencegah σF → 0 (yang akan membuat bobot $1/(2\sigma_F^2) \to \infty$ dan menyebabkan overfitting).
+
+**Implikasi terhadap estimasi bersama:**
+- Ketika U belum konvergen, LF besar → gradien mendorong σF membesar agar penalti $L_F/(2\sigma_F^2)$ tidak terlalu dominan.
+- Ketika U mulai konvergen, LF mengecil → suku log σF mendorong σF mengecil, sehingga bobot fidelitas data meningkat.
+- Terjadi **keseimbangan dinamis**: σF mengontrol seberapa ketat model harus merekonstruksi data, dan nilainya ditentukan oleh data secara otomatis, bukan melalui grid search.
+
+---
+
+## B.3 — Derivasi Prior Gibbs JS
+
+**Pertanyaan:** Turunkan pS(U|W,σS²) = exp(−LS/(2σS²))/ZS menjadi JS = LS/(2σS²) + (T·V·d) log σS. Jelaskan bagaimana faktor T·V·d muncul.
+
+**Jawaban:**
+
+**Langkah 1 — Definisi Prior Gibbs.** Struktur embedding dimodelkan sebagai distribusi Gibbs:
+
+$$p_S(U \mid W, \sigma_S) = \frac{1}{Z_S(\sigma_S)} \exp\!\left(-\frac{L_S(U)}{2\sigma_S^2}\right)$$
+
+dengan LS(U) = Σ_{t≠t'} W_{t,t'} ‖Ut − Ut'‖F², dan fungsi partisi:
+
+$$Z_S(\sigma_S) = \int \exp\!\left(-\frac{L_S(U)}{2\sigma_S^2}\right) dU$$
+
+**Langkah 2 — Homogenitas dan Perubahan Variabel.** LS bersifat homogen derajat dua: LS(cU) = c² LS(U). Substitusi U = σS V:
+
+$$L_S(\sigma_S V) = \sigma_S^2 L_S(V)$$
+
+Integran menjadi:
+
+$$\exp\!\left(-\frac{L_S(\sigma_S V)}{2\sigma_S^2}\right) = \exp\!\left(-\frac{L_S(V)}{2}\right)$$
+
+**Langkah 3 — Jacobian Perubahan Variabel.** U ∈ ℝ^{T × V × d} (T domain, V kata, d dimensi). Saat U = σS V, elemen diferensial berubah sebagai:
+
+$$dU = \sigma_S^{T \cdot V \cdot d} \, dV$$
+
+karena setiap dari n = T·V·d dimensi diskalakan oleh σS.
+
+**Langkah 4 — Fungsi Partisi Tersederhanakan:**
+
+$$Z_S(\sigma_S) = \sigma_S^{T V d} \int \exp\!\left(-\frac{L_S(V)}{2}\right) dV = \sigma_S^{T V d} \cdot Z_S(1)$$
+
+**Langkah 5 — Negatif Log Prior:**
+
+$$\begin{aligned}
+-\ln p_S(U \mid W, \sigma_S) &amp;= \frac{L_S(U)}{2\sigma_S^2} + \ln Z_S(\sigma_S) \\[4pt]
+&amp;= \frac{L_S(U)}{2\sigma_S^2} + T V d \ln \sigma_S + \underbrace{\ln Z_S(1)}_{\text{konstan}}
+\end{aligned}$$
+
+Konstanta ln ZS(1) tidak bergantung pada parameter dan diabaikan, menghasilkan:
+
+$$J_S(U, \sigma_S) = \frac{L_S}{2\sigma_S^2} + (T \cdot V \cdot d) \ln \sigma_S$$
+
+**Penjelasan faktor T·V·d:** Jumlah total elemen bebas dalam tensor embedding U adalah T × V × d — setiap domain memiliki V embedding vektor berdimensi d. Jacobian substitusi U = σS V menghasilkan determinan σS^n dengan n = T·V·d.
+
+---
+
+## B.4 — Fungsi Partisi ZS dan Homogenitas
+
+**Pertanyaan:** Bagaimana sifat homogenitas derajat dua LS(cU) = c²LS(U) digunakan untuk menyederhanakan fungsi partisi? Tunjukkan ZS ∝ (σS²)^(TVd/2).
+
+**Jawaban:**
+
+**Langkah 1 — Definisi Fungsi Partisi:**
+
+$$Z_S(\sigma_S) = \int_{\mathbb{R}^{T V d}} \exp\!\left(-\frac{L_S(U)}{2\sigma_S^2}\right) dU$$
+
+**Langkah 2 — Homogenitas Derajat Dua.** Sifat utama: untuk sembarang skalar c > 0,
+
+$$L_S(cU) = c^2 L_S(U)$$
+
+**Pembuktian singkat:** LS(U) = Σ_{t≠t'} W_{t,t'} ‖Ut − Ut'‖F². Setiap suku norma Frobenius memenuhi ‖cUt − cUt'‖F² = c²‖Ut − Ut'‖F². Maka LS(cU) = c²LS(U). ∎
+
+**Langkah 3 — Perubahan Variabel.** Pilih c = 1/σS, atau secara ekuivalen U' = U/σS. Maka U = σS U' dan:
+
+$$\exp\!\left(-\frac{L_S(\sigma_S U')}{2\sigma_S^2}\right) = \exp\!\left(-\frac{\sigma_S^2 L_S(U')}{2\sigma_S^2}\right) = \exp\!\left(-\frac{L_S(U')}{2}\right)$$
+
+Parameter σS lenyap dari eksponensial.
+
+**Langkah 4 — Diferensial.** dU = σS^{T V d} dU' (determinan Jacobian matriks diagonal T V d × T V d dengan entri σS).
+
+**Langkah 5 — Bentuk Akhir:**
+
+$$Z_S(\sigma_S) = \sigma_S^{T V d} \int \exp\!\left(-\frac{L_S(U')}{2}\right) dU' = \sigma_S^{T V d} \cdot Z_S(1)$$
+
+Karena $\sigma_S^{TVd} = (\sigma_S^2)^{TVd/2}$, maka:
+
+$$Z_S(\sigma_S) \propto (\sigma_S^2)^{\frac{T V d}{2}}$$
+
+Hubungan proporsionalitas ini adalah kunci: fungsi partisi ZS(σS) berskala sebagai pangkat T V d / 2 dari σS², yang setelah negatif logaritma menghasilkan suku (T V d) ln σS dalam JS.
+
+---
+
+## B.5 — Penurunan JRD
+
+**Pertanyaan:** Turunkan bentuk JRD yang setara dengan JS tetapi dengan dimensi yang sesuai.
+
+**Jawaban:**
+
+**Langkah 1 — Definisi Smoothing Loss.** LRD mengukur variasi antar-domain:
+
+$$L_{RD}(U) = \sqrt{\sum_{t \neq t'} D_{t,t'}^2}, \quad D_{t,t'} = \|U_t - U_{t'}\|_F^2$$
+
+atau dalam bentuk ekuivalen yang lebih umum: LRD(U) = Σ_{t≠t'} ‖Ut − Ut'‖F² = LS(U) dalam banyak implementasi.
+
+**Langkah 2 — Prior Gibbs untuk Smoothing:**
+
+$$p_{RD}(U \mid \sigma_{RD}) = \frac{1}{Z_{RD}(\sigma_{RD})} \exp\!\left(-\frac{L_{RD}(U)}{2\sigma_{RD}^2}\right)$$
+
+**Langkah 3 — Homogenitas.** Sama seperti LS, fungsi LRD bersifat homogen derajat dua:
+
+$$L_{RD}(cU) = c^2 L_{RD}(U)$$
+
+karena setiap suku ‖cUt − cUt'‖F² = c²‖Ut − Ut'‖F², dan akar kuadrat dari c²·(Σ D²) menghasilkan c·√(Σ D²) = c·LRD(U). —> *Koreksi*: jika LRD didefinisikan sebagai Σ‖Ut−Ut'‖F², homogenitas derajat dua terpenuhi langsung. Jika LRD = √(Σ D²), homogenitas derajat SATU. Dalam skripsi ini digunakan definisi Σ‖Ut−Ut'‖F² sehingga homogenitas derajat dua terpenuhi.
+
+**Langkah 4 — Fungsi Partisi.** Dengan perubahan variabel U = σRD V:
+
+$$Z_{RD}(\sigma_{RD}) = \sigma_{RD}^{T V d} \cdot Z_{RD}(1)$$
+
+**Langkah 5 — Negatif Log Prior:**
+
+$$\begin{aligned}
+-\ln p_{RD}(U \mid \sigma_{RD}) &amp;= \frac{L_{RD}}{2\sigma_{RD}^2} + \ln Z_{RD}(\sigma_{RD}) \\[4pt]
+&amp;= \frac{L_{RD}}{2\sigma_{RD}^2} + T V d \ln \sigma_{RD} + \text{konstan}
+\end{aligned}$$
+
+Maka:
+
+$$J_{RD}(U, \sigma_{RD}) = \frac{L_{RD}}{2\sigma_{RD}^2} + (T \cdot V \cdot d) \ln \sigma_{RD}$$
+
+Bentuk ini identik dengan JS karena (a) fungsi energi sama-sama homogen derajat dua, dan (b) dimensi parameter U sama (T·V·d).
+
+---
+
+## B.6 — Reparameterisasi s = log σ²
+
+**Pertanyaan:** Mengapa reparameterisasi ini diperlukan? Tunjukkan bagaimana transformasi mengubah fungsi objektif dari L/(2σ²) + (k/2)log σ² menjadi ½exp(−s)L + (k/2)s, dan jelaskan keuntungannya.
+
+**Jawaban:**
+
+**Motivasi — Kendala Non-Negatif.** Parameter σ² harus selalu positif (variansi). Mengoptimasi σ² secara langsung berisiko:
+1. **Pelanggaran kendala** — update gradien dapat mendorong σ² &lt; 0.
+2. **Skala tidak seragam** — σ² dapat bervariasi hingga orde magnitudo yang berbeda, menyulitkan learning rate tunggal.
+3. **Numerical underflow** — σ² → 0 menyebabkan pembagian dengan bilangan sangat kecil.
+
+**Transformasi.** Definisikan:
+
+$$s := \ln \sigma^2 \quad \Longleftrightarrow \quad \sigma^2 = e^{s}, \quad \sigma = e^{s/2}$$
+
+**Substitusi ke Bentuk Umum JF/S/RD.** Setiap komponen memiliki bentuk:
+
+$$J = \frac{L}{2\sigma^2} + \frac{n}{2} \ln \sigma^2$$
+
+dengan n = 2·T·V² untuk JF (karena suku log σF dikalikan TV² = (2·TV²)/2·ln σF²) atau n = 2·T·V·d untuk JS dan JRD.
+
+**Langkah demi langkah:**
+
+$$\begin{aligned}
+J &amp;= \frac{L}{2 e^{s}} + \frac{n}{2} \cdot s \\[4pt]
+&amp;= \frac{1}{2} e^{-s} L + \frac{n}{2} s
+\end{aligned}$$
+
+Untuk kasus spesifik dengan k = T·V² atau k = T·V·d:
+
+$$J = \frac{1}{2} e^{-s} L + \frac{k}{2} s$$
+
+di mana untuk JF: k_F = 2·T·V²; untuk JS/RD: k_S = 2·T·V·d.
+
+**Keuntungan Reparameterisasi:**
+
+1. **Kendala tak-berkendala** — s ∈ ℝ, tidak ada batasan; optimasi bebas tanpa proyeksi.
+2. **Skala gradien seragam** — gradien ∂J/∂s tidak bergantung pada magnitudo σ², memudahkan tuning learning rate.
+3. **Stabilitas numerik** — menghindari pembagian dengan σ² yang mendekati nol atau ∞.
+4. **Interpretasi** — s = 0 ⇔ σ² = 1, s &lt; 0 ⇔ σ² &lt; 1 (ketidakpastian kecil, bobot besar), s > 0 ⇔ σ² > 1 (ketidakpastian besar, bobot kecil).
+5. **Linierisasi suku regularisasi** — suku (k/2)s adalah linear dalam s, bukan non-linear dalam σ, memudahkan optimasi.
+
+---
+
+## B.7 — Gradien Setelah Reparameterisasi
+
+**Pertanyaan:** Turunkan ∂J/∂s untuk J = ½exp(−s)L + (k/2)s. Bagaimana bentuk ini mempermudah optimasi dibanding parameterisasi asli σ²?
+
+**Jawaban:**
+
+**Turunan Langsung:**
+
+$$J = \frac{1}{2} e^{-s} L + \frac{k}{2} s$$
+
+$$\frac{\partial J}{\partial s} = -\frac{1}{2} e^{-s} L + \frac{k}{2}$$
+
+$$\boxed{\frac{\partial J}{\partial s} = \frac{1}{2} \bigl(k - e^{-s} L \bigr)}$$
+
+**Interpretasi:** Gradien mencapai nol saat $e^{-s} L = k$, yaitu $\sigma^2 = L / k$.
+
+**Perbandingan dengan Parameterisasi Asli σ².** Dalam parameterisasi asli ($\sigma^2$):
+
+$$J = \frac{L}{2\sigma^2} + \frac{k}{2} \ln \sigma^2$$
+
+$$\frac{\partial J}{\partial (\sigma^2)} = -\frac{L}{2\sigma^4} + \frac{k}{2\sigma^2} = \frac{1}{2\sigma^2}\left(k - \frac{L}{\sigma^2}\right)$$
+
+**Keunggulan s = ln σ²:**
+
+| Aspek | Parameterisasi σ² | Parameterisasi s |
+|-------|-------------------|------------------|
+| Bentuk gradien | $\frac{1}{2\sigma^2}(k - L/\sigma^2)$ | $\frac{1}{2}(k - e^{-s}L)$ |
+| Ketergantungan skala | Gradien ∝ 1/σ² — mengecil saat σ² besar | Seragam — tidak bergantung pada nilai s |
+| Saturasi saat σ² besar | Gradien mendekati 0 (vanishing) | Gradien tetap ~ k/2 |
+| Learning rate sensitif | Sangat — harus diskalakan ulang | Lebih robust |
+| Update dengan Adam | Perlu clip gradien atau normalisasi | Langsung stabil |
+
+**Implikasi:** Dengan reparameterisasi, optimasi σ menjadi semudah mengoptimasi parameter lain dalam jaringan — Adam dapat langsung menerapkan update tanpa penyesuaian skala khusus.
+
+---
+
+## B.8 — Strategi Optimasi JMAP
+
+**Pertanyaan:** Jelaskan (θ̂,σ̂) = argmax [ln P(D|θ,σ) + ln P(θ|σ) + ln P(σ)]. Bagaimana setiap suku berkorespondensi dengan JF, JS, JRD?
+
+**Jawaban:**
+
+**Formulasi JMAP.** Estimasi simultan parameter embedding U (θ) dan hiperparameter σ = (σF, σS, σRD) dengan memaksimalkan log-posterior gabungan:
+
+$$(\hat{U}, \hat{\sigma}) = \arg\max_{U, \sigma} \bigl[ \underbrace{\ln P(Y \mid U, \sigma_F)}_{\text{likelihood}} + \underbrace{\ln P(U \mid \sigma_S, \sigma_{RD})}_{\text{prior}} + \underbrace{\ln P(\sigma)}_{\text{hyperprior}} \bigr]$$
+
+Dalam praktiknya, kita meminimalkan negatif log-posterior:
+
+$$(\hat{U}, \hat{\sigma}) = \arg\min_{U, \sigma} L_{MAP}(U, \sigma)$$
+
+**Korespondensi dengan JF, JS, JRD:**
+
+| Suku Bayes | Komponen | Ekspresi |
+|------------|----------|----------|
+| $-\ln P(Y \mid U, \sigma_F)$ | **JF** (Negative Log-Likelihood) | $\frac{L_F}{2\sigma_F^2} + T V^2 \ln \sigma_F$ |
+| $-\ln P(U \mid \sigma_S)$ | **JS** (Gibbs Prior Struktur) | $\frac{L_S}{2\sigma_S^2} + T V d \ln \sigma_S$ |
+| $-\ln P(U \mid \sigma_{RD})$ | **JRD** (Gibbs Prior Smoothing) | $\frac{L_{RD}}{2\sigma_{RD}^2} + T V d \ln \sigma_{RD}$ |
+| $-\ln P(\sigma)$ | **Hyperprior** | Diabaikan (improper prior → konstan) |
+
+**Fungsi Objektif Akhir:**
+
+$$L_{MAP}(U, \sigma_F, \sigma_S, \sigma_{RD}) = \underbrace{\frac{L_F}{2\sigma_F^2} + T V^2 \ln \sigma_F}_{J_F} + \underbrace{\frac{L_S}{2\sigma_S^2} + T V d \ln \sigma_S}_{J_S} + \underbrace{\frac{L_{RD}}{2\sigma_{RD}^2} + T V d \ln \sigma_{RD}}_{J_{RD}}$$
+
+**Strategi Optimasi:**
+1. **Per-domain updates:** Embedding Ut dioptimasi per domain — setiap domain memiliki optimizer Adam sendiri.
+2. **Global update σ:** Parameter s = ln σ² diakumulasi gradien dari seluruh domain, diperbarui sekali per outer step.
+3. **Adam optimizer:** Learning rate terpisah untuk embedding dan s (biasanya s lebih kecil).
+4. **Reparameterisasi:** Semua σ² direparameterisasi sebagai s = ln σ² untuk stabilitas numerik.
+
+---
+
+## B.9 — Perbedaan JMAP dengan MAP Biasa
+
+**Pertanyaan:** Apa perbedaan mendasar JMAP dengan MAP biasa? Dalam kondisi apa JMAP lebih unggul?
+
+**Jawaban:**
+
+**Perbedaan Mendasar:**
+
+| Aspek | MAP Biasa | JMAP |
+|-------|-----------|------|
+| Parameter | Hanya θ (parameter utama) | θ + σ (parameter + hiperparameter) |
+| Prior | P(θ) — fixed, tidak diestimasi | P(θ|σ) — bergantung σ yang juga diestimasi |
+| Objektif | $\ln P(D\|\theta) + \ln P(\theta)$ | $\ln P(D\|\theta,\sigma) + \ln P(\theta\|\sigma) + \ln P(\sigma)$ |
+| Hiperparameter | Ditentukan manual / grid search | Diestimasi simultan dari data |
+| Fleksibilitas | Bobot regularisasi tetap | Bobot regularisasi adaptif |
+
+**Kapan JMAP Lebih Unggul:**
+
+1. **Multi-task learning** — ketika beberapa fungsi loss dengan skala berbeda harus digabungkan (seperti W2VPred: LF, LS, LRD).
+2. **Hiperparameter tidak diketahui** — tidak ada justifikasi teoretis yang kuat untuk nilai tetap tertentu.
+3. **Grid search tidak praktis** — jumlah hiperparameter > 2 membuat grid search eksponensial mahal.
+4. **Data heterogen** — ketika karakteristik noise/ketidakpastian bervariasi antar komponen atau domain.
+5. **Skala besar** — pelatihan ulang untuk setiap titik grid tidak feasible.
+
+**Kapan JMAP Tidak Diperlukan:**
+- Hanya satu komponen loss (MAP biasa cukup).
+- Hiperparameter diketahui dari teori/fisika.
+- Sumber daya komputasi sangat terbatas.
+
+---
+
+## B.10 — Korespondensi λ dan τ
+
+**Pertanyaan:** Diberikan λ = σF²/σS² dan τ = σF²/σRD², tunjukkan bagaimana parameter balancing ini muncul dalam fungsi objektif gabungan. Apa interpretasi praktis λ dan τ?
+
+**Jawaban:**
+
+**Turunan Korespondensi.** Fungsi objektif JMAP:
+
+$$L_{MAP} = \frac{L_F}{2\sigma_F^2} + \frac{L_S}{2\sigma_S^2} + \frac{L_{RD}}{2\sigma_{RD}^2} + T V^2 \ln \sigma_F + T V d \ln \sigma_S + T V d \ln \sigma_{RD}$$
+
+Faktorkan $1/(2\sigma_F^2)$ dari tiga suku pertama:
+
+$$\begin{aligned}
+L_{MAP} &amp;= \frac{1}{2\sigma_F^2} \Bigl[ L_F + \frac{\sigma_F^2}{\sigma_S^2} L_S + \frac{\sigma_F^2}{\sigma_{RD}^2} L_{RD} \Bigr] + \text{(suku log)} \\[4pt]
+&amp;= \frac{1}{2\sigma_F^2} \Bigl[ L_F + \lambda L_S + \tau L_{RD} \Bigr] + \text{(suku log)}
+\end{aligned}$$
+
+di mana:
+
+$$\boxed{\lambda = \frac{\sigma_F^2}{\sigma_S^2}}, \quad \boxed{\tau = \frac{\sigma_F^2}{\sigma_{RD}^2}}$$
+
+**Interpretasi Praktis λ dan τ:**
+
+1. **Rasio ketidakpastian** — λ besar berarti σS kecil relatif terhadap σF → prior struktur &quot;kuat&quot; (ketidakpastian rendah, bobot besar).
+2. **Bobot regularisasi efektif** — λ dan τ adalah bobot yang secara klasik ditentukan via grid search.
+3. **Adaptif otomatis** — dalam JMAP, λ dan τ tidak tetap; mereka berubah selama pelatihan karena σF, σS, σRD diestimasi simultan.
+4. **Skala** — λ = 1 berarti ketidakpastian fidelitas dan struktur seimbang; λ > 1 berarti struktur lebih dipercaya daripada data; λ &lt; 1 berarti data lebih dominan.
+
+**Keterbatasan Pandangan Ini:** Persamaan di atas menyederhanakan dengan mengabaikan suku log σ. Dalam JMAP penuh, suku log σ juga berkontribusi pada estimasi σ, sehingga λ dan τ bukan sekadar rasio tetap tetapi hasil dari optimasi yang mempertimbangkan dimensi data (T·V² vs T·V·d).
+
+---
+
+## B.11 — σF² sebagai Faktor Normalisasi
+
+**Pertanyaan:** Mengapa σF² dapat difaktorkan keluar dari semua suku? Bagaimana hal ini memengaruhi strategi optimasi?
+
+**Jawaban:**
+
+σF² dapat difaktorkan keluar dari suku-suku utama (L_F, L_S, L_RD) karena setiap komponen loss dibagi oleh variansinya masing-masing. Saat kita menulis:
+
+$$L_{MAP} = \frac{L_F}{2\sigma_F^2} + \frac{L_S}{2\sigma_S^2} + \frac{L_{RD}}{2\sigma_{RD}^2} + \cdots$$
+
+dan mendefinisikan λ = σF²/σS², τ = σF²/σRD², maka:
+
+$$L_{MAP} = \frac{1}{2\sigma_F^2} \bigl(L_F + \lambda L_S + \tau L_{RD}\bigr) + \cdots$$
+
+**Mengapa Ini Penting:**
+
+1. **Satu skala referensi** — σF² menjadi unit dasar; λ dan τ adalah rasio yang lebih mudah diinterpretasi daripada σS² dan σRD² secara langsung.
+2. **Tidak mengubah titik optimum** — faktor $1/(2\sigma_F^2)$ adalah konstanta positif untuk setiap iterasi; meminimalkan $L_F + \lambda L_S + \tau L_{RD}$ ekuivalen dengan meminimalkan $L_{MAP}$ terhadap U untuk σ tetap.
+
+**Dampak pada Strategi Optimasi:**
+
+- **Tidak ada simplifikasi berlebihan:** Meskipun σF² dapat difaktorkan dari suku loss, suku log σF, log σS, log σRD **tetap ada** dan memengaruhi estimasi σ. Faktorisasi hanya membantu interpretasi (menghubungkan ke parameter balancing original), bukan penyederhanaan optimasi.
+- **Optimasi penuh tetap diperlukan:** σF, σS, σRD masing-masing diperbarui melalui gradien terhadap J_F, J_S, J_RD secara terpisah.
+
+---
+
+## B.12 — Homogenitas pada LF
+
+**Pertanyaan:** Apakah fungsi fidelity LF(U) bersifat homogen derajat dua terhadap U? Jika tidak, bagaimana perlakuan fungsi partisi berbeda?
+
+**Jawaban:**
+
+**Homogenitas LF.** LF(U) = Σ_t ‖Y_t − U_t U_tᵀ‖F². Jika U diskalakan menjadi cU:
+
+$$L_F(cU) = \sum_t \| Y_t - (cU_t)(cU_t)^\top \|_F^2 = \sum_t \| Y_t - c^2 U_t U_t^\top \|_F^2$$
+
+**LF BUKAN homogen derajat dua** karena:
+- Suku rekonstruksi $U_t U_t^\top$ berskala $c^2$, bukan $c$.
+- Data observasi Y_t tidak diskalakan.
+- Akibatnya: $L_F(cU) \neq c^2 L_F(U)$.
+
+**Implikasi terhadap Fungsi Partisi:**
+
+Likelihood Gaussian **tidak memiliki fungsi partisi** yang bergantung pada parameter dalam bentuk integral yang perlu disederhanakan. Dalam formulasi:
+
+$$p(Y \mid U, \sigma_F) = \prod_{t,i,j} \frac{1}{\sqrt{2\pi}\sigma_F} \exp\!\left(-\frac{(Y_{t,ij} - [U_t U_t^\top]_{ij})^2}{2\sigma_F^2}\right)$$
+
+Fungsi partisi di sini adalah $(2\pi)^{TV^2/2} \sigma_F^{TV^2}$, yang merupakan konstanta normalisasi dari distribusi Gaussian, bukan dari integral atas U. Suku $(T V^2)\ln \sigma_F$ muncul langsung dari normalisasi Gaussian — tanpa perlu homogenitas.
+
+**Perbandingan:**
+
+| Aspek | JF (Likelihood) | JS/JRD (Prior) |
+|-------|-----------------|----------------|
+| Sumber suku log | Normalisasi distribusi Gaussian | Fungsi partisi dari integral atas U |
+| Homogenitas diperlukan? | Tidak | Ya |
+| Eksponen suku log | TV² | TVd |
+| Sifat | Tepat (exact) | Bergantung pada properti homogenitas |
+
+---
+
+## B.13 — Dampak Reparameterisasi pada Prior σ
+
+**Pertanyaan:** Jika kita menempatkan prior non-informatif p(σ²) ∝ 1/σ², bagaimana bentuk suku prior setelah reparameterisasi? Apakah transformasi mengubah interpretasi prior?
+
+**Jawaban:**
+
+**Prior Non-Informatif Jeffreys untuk σ²:**
+
+$$p(\sigma^2) \propto \frac{1}{\sigma^2}$$
+
+Ini adalah prior improper yang invarian terhadap skala — tidak memihak nilai σ² tertentu.
+
+**Transformasi s = ln σ².** Menggunakan aturan perubahan variabel untuk densitas probabilitas:
+
+$$p(s) = p(\sigma^2) \cdot \left|\frac{d\sigma^2}{ds}\right|$$
+
+$$\frac{d\sigma^2}{ds} = \frac{d}{ds} e^{s} = e^{s} = \sigma^2$$
+
+Maka:
+
+$$p(s) \propto \frac{1}{\sigma^2} \cdot \sigma^2 = 1$$
+
+**Kesimpulan:** Setelah reparameterisasi, prior 1/σ² menjadi prior **uniform** (konstan) dalam s.
+
+**Implikasi:**
+
+| Aspek | Sebelum (σ²) | Sesudah (s) |
+|-------|--------------|-------------|
+| Prior | p(σ²) ∝ 1/σ² | p(s) ∝ 1 (uniform) |
+| Sifat | Improper (∫ 1/σ² dσ² = ∞) | Improper (∫ 1 ds = ∞) |
+| Invarian skala | Ya | Tidak langsung |
+| Efek pada optimasi | Sama — kontribusi konstan | Sama — kontribusi konstan |
+
+**Apakah interpretasi berubah?** Tidak secara fundamental. Prior non-informatif tetap menjadi prior non-informatif — tidak memberikan informasi preferensial. Transformasi hanya mengubah parameterisasi, bukan informasi yang dikodekan.
+
+**Catatan:** Dalam implementasi JMAP skripsi ini, prior P(σ) diabaikan sepenuhnya (diperlakukan sebagai konstanta) karena:
+1. Prior improper tidak berkontribusi pada gradien.
+2. Suku regularisasi log σ sudah ada dari normalisasi Gibbs/Gaussian.
+3. Menambahkan hyperprior tambahan tidak mengubah estimasi secara signifikan untuk tujuan praktis.
+
+---
+
+## B.14 — Penurunan JS untuk Dimensi d
+
+**Pertanyaan:** Tuliskan bentuk eksplisit LS dalam konteks W2VPred dan turunkan dimensi integral fungsi partisi sehingga menghasilkan faktor TVd/2.
+
+**Jawaban:**
+
+**Bentuk Eksplisit LS.**
+Structure Loss dalam W2VPred didefinisikan sebagai penjumlahan jarak kuadrat antar domain embedding, dibobot oleh matriks W:
+
+$$L_S(U) = \sum_{t=1}^T \sum_{t' \neq t} W_{t,t'} \cdot \|U_t - U_{t'}\|_F^2$$
+
+di mana:
+- U_t ∈ ℝ^{V × d} adalah embedding domain t.
+- W_{t,t'} adalah bobot kesamaan antar domain (misal, dari co-occurrence domain label).
+- Norma Frobenius: ‖U_t − U_{t'}‖F² = Σ_{i=1}^V Σ_{k=1}^d (U_{t,i,k} − U_{t',i,k})².
+
+**Dimensi Ruang Parameter.** Tensor embedding U memiliki total:
+
+$$N = T \cdot V \cdot d$$
+
+parameter bebas. Setiap Ut adalah matriks V × d, dan ada T domain.
+
+**Turunan Integral Fungsi Partisi.**
+
+$$Z_S(\sigma_S) = \int_{\mathbb{R}^{T V d}} \exp\!\left(-\frac{L_S(U)}{2\sigma_S^2}\right) dU$$
+
+**Langkah 1 — Homogenitas.** LS(cU) = c²LS(U).
+
+**Langkah 2 — Substitusi U = σS V.** Untuk V ∈ ℝ^{T V d}:
+
+$$L_S(\sigma_S V) = \sigma_S^2 L_S(V)$$
+
+Integran menjadi exp(−LS(V)/2), bebas dari σS.
+
+**Langkah 3 — Diferensial.** Bentuk dU dalam koordinat kartesian ℝ^{T V d}:
+
+$$U = \sigma_S V \quad\Longrightarrow\quad dU = \sigma_S^{T V d} \, dV$$
+
+Karena dU = Π_{t,i,k} dU_{t,i,k} dan dU_{t,i,k} = σS dV_{t,i,k}, maka ada TVd faktor σS.
+
+**Langkah 4 — Bentuk Akhir:**
+
+$$Z_S(\sigma_S) = \sigma_S^{T V d} \int \exp\!\left(-\frac{L_S(V)}{2}\right) dV = \sigma_S^{T V d} \cdot Z_S(1)$$
+
+Karena $\sigma_S^{T V d} = (\sigma_S^2)^{T V d / 2}$, diperoleh:
+
+$$Z_S(\sigma_S) \propto (\sigma_S^2)^{\frac{T V d}{2}}$$
+
+**Negatif Log Prior:**
+
+$$-\ln p_S = \frac{L_S}{2\sigma_S^2} + \underbrace{\frac{T V d}{2} \ln \sigma_S^2}_{= T V d \ln \sigma_S} + \text{konstan}$$
+
+Jadi faktor T·V·d pada suku log σS berasal langsung dari jumlah dimensi N = T·V·d dalam integral fungsi partisi.
+
+---
+
+## B.15 — Alternatif Reparameterisasi
+
+**Pertanyaan:** Selain s = log σ², adakah transformasi lain yang menjamin σ > 0? Bandingkan kelebihan dan kekurangan masing-masing.
+
+**Jawaban:**
+
+Ada beberapa transformasi yang menjamin σ > 0:
+
+**1. Softplus (σ = ln(1 + eʳ))**
+
+- Parameter bebas: r ∈ ℝ.
+- Transformasi: σ² = ln(1 + eʳ).
+- Gradien: ∂σ²/∂r = eʳ/(1 + eʳ) = sigmoid(r) ∈ (0, 1).
+- Kelebihan: Lebih smooth di sekitar 0; gradien tidak meledak untuk σ → 0.
+- Kekurangan: Asymptot linear untuk r besar → skala tidak eksponensial; inversi tidak closed-form; komputasi lebih mahal.
+
+**2. Eksponensial (σ² = eˢ) — s = ln σ² ✅ (digunakan)**
+
+- Parameter bebas: s ∈ ℝ.
+- Gradien: ∂σ²/∂s = σ² — gradien besar saat σ² besar, kecil saat σ² kecil.
+- Kelebihan: Interpretasi langsung (ln-variance); inversi trivial; derivasi sederhana; suku regularisasi (k/2)s linear.
+- Kekurangan: Gradien tak-terbatas untuk σ → 0 (tapi dalam praktik σ tidak pernah → 0 karena suku log σ mencegahnya).
+
+**3. Kuadrat (σ = a²)**
+
+- Parameter bebas: a ∈ ℝ.
+- Transformasi: σ = a².
+- Gradien: ∂J/∂a = (∂J/∂σ)(2a).
+- Kelebihan: Sederhana secara komputasi.
+- Kekurangan: Non-bijective (a dan −a menghasilkan σ sama); kurvatur tidak seragam; gradien menghilang saat a → 0.
+
+**4. Inverse-link (precision) — τ = 1/σ²**
+
+- Parameter bebas: τ > 0 (precision).
+- Transformasi: J = (τ/2)L − (k/2)ln τ.
+- Kelebihan: Bentuk linear dalam τ; interpretasi sebagai presisi.
+- Kekurangan: Tetap harus memastikan τ > 0; memerlukan transformasi lain jika τ dioptimasi bebas.
+
+**Perbandingan:**
+
+| Metode | Domain | Gradien stabil | Interpretasi | Kompleksitas |
+|--------|--------|---------------|--------------|-------------|
+| **s = ln σ²** (dipilih) | ℝ | ✓ | Mudah | Rendah |
+| Softplus | ℝ | ✓✓ | Sedang | Sedang |
+| σ = a² | ℝ | ✗ (vanishing) | Mudah | Rendah |
+| τ = 1/σ² | ℝ⁺ | ✓ | Mudah (precision) | Rendah |
+
+**Alasan Pemilihan s = ln σ² dalam Skripsi:**
+
+1. **Konsistensi dengan literatur** — Kendall et al. (2018) menggunakan s = ln σ².
+2. **Kemudahan derivasi** — suku (k/2)s linear, memudahkan interpretasi gradien.
+3. **Hubungan langsung dengan bobot** — bobot efektif w = 1/(2σ²) = ½exp(−s), interpretasi intuitif: s besar → ketidakpastian tinggi → bobot kecil.
+
+---
+
+## B.16 — Bertahap vs Bersama
+
+**Pertanyaan:** Lebih baik estimasi θ dan σ bersama dalam satu loop, atau bergantian (block-coordinate descent)? Jelaskan pertimbangannya.
+
+**Jawaban:**
+
+**Dua Strategi:**
+
+1. **Bersama (Joint — JMAP):** θ dan σ diperbarui dalam loop yang sama, setiap iterasi memperbarui keduanya secara berurutan.
+2. **Bergantian (Block-Coordinate Descent — BCD):** Iterasi besar: optimasi θ hingga konvergen dengan σ tetap, lalu optimasi σ dengan θ tetap, ulangi.
+
+**Perbandingan:**
+
+| Aspek | Bersama (JMAP) | Bergantian (BCD) |
+|-------|----------------|-------------------|
+| **Konvergensi** | Satu fase, konvergen ke local optimum bersama | Dua fase; berpotensi osilasi antar siklus |
+| **Biaya per iterasi** | Lebih murah — σ update sekali per step | Lebih mahal — perlu konvergensi penuh θ setiap siklus σ |
+| **Stabilitas** | Sensitif terhadap learning rate σ | Lebih stabil karena σ diestimasi pada θ (hampir) optimal |
+| **Teori konvergensi** | Landasan lebih lemah (parameter bersama tidak konveks) | Konvergensi terjamin untuk fungsi yang cukup smooth |
+| **Efisiensi komputasi** | Satu pelatihan → langsung dapat σ | Pelatihan berulang (inner loop) |
+| **Implementasi** | Lebih sederhana (satu loop) | Lebih kompleks (kriteria konvergensi inner loop) |
+| **Risiko** | σ bisa konvergen premature ke nilai suboptimal | σ bisa berubah drastis antar siklus |
+
+**Pertimbangan Kunci untuk W2VPred:**
+
+- **Jumlah parameter:** U memiliki ~TVd = jutaan parameter; σ hanya 3 skalar. Overhead update σ per step sangat kecil.
+- **Skala gradien:** Embedding diperbarui per-domain dengan Adam terpisah; σ mengakumulasi gradien dari semua domain. Struktur ini secara natural adalah **hybrid** — embedding diperbarui bersama (joint), sementara σ bisa dilihat sebagai koordinat terpisah.
+- **Praktik saat ini:** Skema yang digunakan adalah bersama dalam satu loop: (1) untuk setiap domain, forward + backward, (2) akumulasi gradien σ, (3) update embedding per domain, (4) update σ global. Ini adalah JMAP dengan satu langkah BCD mini per iterasi.
+
+**Rekomendasi:** Untuk W2VPred dengan dimensi kecil σ (3 parameter), **estimation bersama** lebih efisien dan praktis. BCD hanya disarankan jika σ sulit konvergen dan menyebabkan osilasi — yang tidak terjadi dalam eksperimen skripsi ini (konvergensi σ monotonik).
+
+---
+
+## B.17 — Bukti Formal Homogenitas
+
+**Pertanyaan:** Buktikan bahwa jika LS(cU) = c²LS(U), maka ZS sebanding dengan (σS²)^(N/2) dengan N = TVd. Gunakan perubahan variabel U' = U/σS.
+
+**Jawaban:**
+
+**Diketahui:**
+- LS: ℝ^{T V d} → ℝ memenuhi LS(cU) = c² LS(U) untuk sembarang c > 0 (homogen derajat dua).
+- N = T·V·d adalah dimensi ruang parameter.
+- Fungsi partisi: $Z_S(\sigma_S) = \int_{\mathbb{R}^N} \exp\!\left(-\frac{L_S(U)}{2\sigma_S^2}\right) dU$.
+
+**Akan dibuktikan:** $Z_S(\sigma_S) = \sigma_S^N \cdot Z_S(1)$.
+
+**Bukti:**
+
+**Langkah 1 — Definisikan perubahan variabel.** Misalkan V = U/σS, atau secara ekuivalen U = σS V. Pemetaan φ: ℝ^N → ℝ^N, φ(V) = σS V, adalah difeomorfisma linear dengan matriks Jacobian J_φ = σS I_N (matriks identitas N×N dikalikan σS).
+
+**Langkah 2 — Hitung Jacobian.** Determinan Jacobian:
+
+$$\det(J_\varphi) = \det(\sigma_S I_N) = \sigma_S^N$$
+
+Maka elemen volume berubah sebagai:
+
+$$dU = |\det(J_\varphi)| \, dV = \sigma_S^N \, dV$$
+
+**Langkah 3 — Substitusi ke integral.** Ganti U = σS V dalam eksponensial:
+
+$$\exp\!\left(-\frac{L_S(U)}{2\sigma_S^2}\right) = \exp\!\left(-\frac{L_S(\sigma_S V)}{2\sigma_S^2}\right)$$
+
+Gunakan homogenitas LS(σS V) = σS² LS(V):
+
+$$= \exp\!\left(-\frac{\sigma_S^2 L_S(V)}{2\sigma_S^2}\right) = \exp\!\left(-\frac{L_S(V)}{2}\right)$$
+
+**Langkah 4 — Integral dalam V.** Substitusi dU = σS^N dV dan integran yang sudah tidak bergantung σS:
+
+$$\begin{aligned}
+Z_S(\sigma_S) &amp;= \int_{\mathbb{R}^N} \exp\!\left(-\frac{L_S(U)}{2\sigma_S^2}\right) dU \\[4pt]
+&amp;= \int_{\mathbb{R}^N} \exp\!\left(-\frac{L_S(V)}{2}\right) \cdot \sigma_S^N \, dV \\[4pt]
+&amp;= \sigma_S^N \int_{\mathbb{R}^N} \exp\!\left(-\frac{L_S(V)}{2}\right) dV
+\end{aligned}$$
+
+**Langkah 5 — Definisi ZS(1).** Integral di atas adalah ZS(1), yaitu fungsi partisi saat σS = 1:
+
+$$Z_S(1) = \int_{\mathbb{R}^N} \exp\!\left(-\frac{L_S(V)}{2}\right) dV$$
+
+Maka:
+
+$$Z_S(\sigma_S) = \sigma_S^N \cdot Z_S(1)$$
+
+Karena N = T V d dan σS^N = (σS²)^(N/2), terbukti bahwa ZS ∝ (σS²)^(TVd/2). ∎
+
+**Implikasi:** Sifat ini memungkinkan fungsi partisi Gibbs yang umumnya intractable (integral dimensi tinggi) difaktorkan menjadi konstanta ZS(1) yang tidak perlu dihitung dikalikan faktor skala σS^N yang dapat diturunkan secara eksak.
+
+---
+
+## B.18 — Konstanta pada JF
+
+**Pertanyaan:** Dalam derivasi JF, terdapat konstanta −(TV²/2)log(2πσF²). Dalam JMAP, apakah pengabaian ini tetap valid ketika σF² diestimasi?
+
+**Jawaban:**
+
+**Konstanta yang dimaksud:**
+
+$$-\ln p(Y \mid U, \sigma_F) = \frac{L_F}{2\sigma_F^2} + \frac{T V^2}{2} \ln(2\pi\sigma_F^2)$$
+
+$$= \frac{L_F}{2\sigma_F^2} + T V^2 \ln \sigma_F + \frac{T V^2}{2} \ln(2\pi)$$
+
+Suku $\frac{T V^2}{2} \ln(2\pi)$ adalah konstanta yang tidak bergantung pada parameter mana pun (U, σF).
+
+**Validitas Pengabaian:**
+
+Ketika mengestimasi **U** (untuk σF tetap):
+
+$$\frac{\partial}{\partial U}\left(\frac{T V^2}{2} \ln(2\pi)\right) = 0$$
+
+✓ Valid — konstanta tidak memengaruhi gradien terhadap U.
+
+Ketika mengestimasi **σF**:
+
+$$\frac{\partial}{\partial \sigma_F}\left(\frac{T V^2}{2} \ln(2\pi)\right) = 0$$
+
+✓ Valid — konstanta tidak bergantung pada σF.
+
+**Amanat:** Suku $\ln(2\pi)$ adalah konstanta murni yang tidak bergantung pada parameter yang dioptimasi. Dalam fungsi objektif JMAP (yang diminimalkan), menambah atau menghilangkan konstanta tidak mengubah titik optimum. Dengan demikian, pengabaian tetap valid.
+
+**Catatan Penting:** Berbeda dengan suku $(T V^2) \ln \sigma_F$ yang berasal dari $\frac{T V^2}{2} \ln \sigma_F^2$ — suku ini bergantung pada σF dan **harus dipertahankan** karena memengaruhi gradien terhadap σF. Hanya bagian $\ln(2\pi)$ yang diabaikan.
+
+---
+
+## B.19 — Interpretasi Geometris Reparameterisasi
+
+**Pertanyaan:** Gambarkan permukaan fungsi objektif sebelum dan sesudah reparameterisasi. Bagaimana transformasi mengubah kurvatur?
+
+**Jawaban:**
+
+**Sebelum Reparameterisasi (σ²).** Perhatikan komponen tunggal dari objektif dalam parameter σ²:
+
+$$J(\sigma^2) = \frac{L}{2\sigma^2} + \frac{n}{2} \ln \sigma^2$$
+
+Plot J terhadap σ² ∈ (0, ∞):
+- σ² → 0⁺: L/(2σ²) → +∞ (dominasi suku loss), J → ∞
+- σ² → ∞: (n/2) ln σ² → ∞ (dominasi suku log), J → ∞
+- Minimum: σ²* = L/n (dari ∂J/∂σ² = 0)
+- **Kurvatur:** Sangat asimetris — curam di kiri (σ² kecil), landai di kanan (σ² besar). Learning rate yang cocok untuk σ² kecil terlalu besar untuk σ² besar dan sebaliknya.
+
+**Sesudah Reparameterisasi (s = ln σ²):**
+
+$$J(s) = \frac{1}{2} e^{-s} L + \frac{n}{2} s$$
+
+Plot J terhadap s ∈ ℝ:
+- s → −∞: ½e^{-s}L → ∞, J → ∞
+- s → +∞: (n/2)s → ∞, J → ∞
+- Minimum: s* = ln(L/n) (dari ∂J/∂s = 0)
+- **Kurvatur:** Hampir simetris di sekitar minimum. Bentuk: ½Le^{-s} + (n/2)s — fungsi konveks yang smooth.
+
+**Perubahan Kurvatur:**
+
+| Aspek | σ²-space | s-space |
+|-------|----------|---------|
+| Bentuk permukaan | Curam-asimetris (asymmetric bowl) | Simetris-checkmark (convex) |
+| Kondisi numerik | Ill-conditioned (rasio eigenval besar) | Well-conditioned |
+| Gradien dominan | Dominasi suku L/(2σ⁴) saat σ kecil | Seragam — ±½(n − e^{-s}L) |
+| Hessian | ∂²J/∂(σ²)² = L/σ⁶ − n/(2σ⁴) — bervariasi | ∂²J/∂s² = ½e^{-s}L > 0 — selalu positif |
+| Optimal learning rate | Harus diskalakan inverse terhadap σ² | Dapat seragam |
+
+**Visualisasi Deskriptif:**
+
+```
+J(σ²)                    J(s)
+  |                       |
+  |\                      |\
+  | \                     | \
+  |  \                    |  \______
+  |   \___                |         \___
+  |       \___            |            \__
+  +--------\---→ σ²       +----------------→ s
+  0         ↑              s* (s = ln σ²)
+         σ²* = L/n
+```
+
+Permukaan J(σ²) memiliki kurvatur yang **sangat bergantung pada nilai σ²** — curam untuk σ² &lt; σ²* dan landai untuk σ² > σ²*. Sebaliknya, J(s) memiliki kurvatur yang **relatif seragam** di seluruh domain s ∈ ℝ.
+
+**Implikasi Praktis:** Transformasi s = ln σ² mengubah masalah optimasi dari yang secara numerik ill-conditioned menjadi well-conditioned, sehingga Adam (atau SGD dengan momentum) dapat menggunakan learning rate yang sama tanpa perlu penjadwalan adaptif per-parameter.
+
+---
+
+## B.20 — Hubungan JMAP dengan Empirical Bayes
+
+**Pertanyaan:** Jelaskan persamaan dan perbedaan JMAP dengan metode Empirical Bayes standar dalam konteks pemilihan hyperparameter σ.
+
+**Jawaban:**
+
+**Empirical Bayes (Type-2 MLE).** Empirical Bayes mengestimasi hiperparameter σ dengan memaksimalkan *marginal likelihood* (evidence):
+
+$$\hat{\sigma}_{EB} = \arg\max_\sigma \, P(Y \mid \sigma) = \arg\max_\sigma \int P(Y \mid U, \sigma_F) \, P(U \mid \sigma_S, \sigma_{RD}) \, dU$$
+
+Parameter U diintegralkan (dimarginalisasi). Integral ini pada umumnya **intractable** untuk model non-linear seperti W2VPred.
+
+**JMAP (Joint MAP).** JMAP mengestimasi U dan σ secara simultan tanpa marginalisasi:
+
+$$(\hat{U}, \hat{\sigma})_{JMAP} = \arg\max_{U, \sigma} \, P(Y \mid U, \sigma_F) \, P(U \mid \sigma_S, \sigma_{RD})$$
+
+**Persamaan:**
+
+1. **Tujuan sama** — keduanya bertujuan mengestimasi σ dari data.
+2. **Hasil asimptotik sama** — untuk jumlah data n → ∞, JMAP dan Empirical Bayes konvergen ke nilai σ yang sama (Laplace approximation: suku koreksi O(log n) dapat diabaikan terhadap O(n)).
+3. **Prior untuk σ** — keduanya memerlukan hyperprior P(σ) (atau mengabaikannya dengan improper prior).
+
+**Perbedaan:**
+
+| Aspek | Empirical Bayes (Type-2 MLE) | JMAP |
+|-------|------------------------------|------|
+| Estimasi U | Dimarginalisasi (integral) | Diestimasi simultan |
+| Kompleksitas | High — integral dimensi tinggi | Lower — optimasi gradien |
+| Akurasi (n kecil) | Lebih akurat (memperhitungkan ketidakpastian U) | Kurang akurat (mengabaikan ketidakpastian U) |
+| Perlakuan U | Nuisance parameter | Parameter utama |
+| Metode solusi | Approksimasi (Laplace, VI, MCMC) | Gradient-based optimization |
+| Traktabilitas | Tidak traktabel untuk W2VPred (non-linear, dimensi tinggi) | Traktabel (autograd) |
+| Risiko | Overconfident pada σ (karena U dianggap pasti) | Underestimate ketidakpastian U |
+
+**Mengapa JMAP Dipilih untuk W2VPred:**
+
+1. **Intraktabilitas integral** — model PPMI non-linear (U_t U_tᵀ) dan dimensi N = TVd jutaan membuat marginalisasi tidak feasible.
+2. **Efisiensi komputasi** — JMAP hanya memerlukan forward-backward pass seperti pelatihan biasa.
+3. **Justifikasi asimptotik** — dataset WikiFoS dengan ~12 domain dan puluhan juta pasangan kata-konteks memberikan n besar, sehingga JMAP ≈ Empirical Bayes.
+4. **Implementasi langsung** — PyTorch autograd untuk U dan σ dalam satu framework.
+
+**Ilustrasi Matematis Hubungan:**
+
+$$\ln P(Y \mid \sigma) = \underbrace{\ln P(Y \mid \hat{U}_{MAP}, \sigma) + \ln P(\hat{U}_{MAP} \mid \sigma)}_{\text{JMAP objective}} + \underbrace{\frac{1}{2} \ln |H| + \text{const}}_{\text{O}(\log n) \text{ koreksi}}$$
+
+di mana H adalah matriks Hessian dari log-posterior. Suku koreksi $\frac{1}{2}\ln|H|$ tumbuh sebagai O(log n), sementara dua suku pertama tumbuh sebagai O(n). Untuk n besar, suku koreksi dapat diabaikan, membuktikan ekivalensi asimptotik JMAP dan Empirical Bayes.
+
+---
+
+> *Dokumen ini disusun untuk persiapan sidang skripsi.*
+> *Kategori B — Formulasi Matematis &amp; Turunan — 20 pertanyaan.*
+> *Acuan utama: wiki/concepts/major/Formulasi_Probabilistik_W2VPred.md, JMAP.md, Strategi_Optimasi_JMAP.md*</span></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Tampilan Grafik</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-32" aria-expanded="true"><h3>Daftar Isi</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#jawaban-sidang--kategori-b-formulasi-matematis--turunan" data-for="jawaban-sidang--kategori-b-formulasi-matematis--turunan">Jawaban Sidang — Kategori B: Formulasi Matematis &amp; Turunan</a></li><li class="depth-1"><a href="#b1--derivasi-jf-dari-likelihood-gaussian" data-for="b1--derivasi-jf-dari-likelihood-gaussian">B.1 — Derivasi JF dari Likelihood Gaussian</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Tautan Balik</h3><ul id="list-2" class="overflow"><li><a href="../preparation/Jawaban_A_Dasar_Teoretis" class="internal">Jawaban_A_Dasar_Teoretis</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Dibuat dengan <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://obsidian.md">Obsidian Vault</a></li><li><a href="https://github.com/your-username/skripsi-wiki">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript.js" type="module" data-persist="true"></script></html>
