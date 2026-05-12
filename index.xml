@@ -5,6 +5,66 @@
       <link>https://skripsi-wiki.netlify.app</link>
       <description>10 catatan terakhir on Skripsi Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
-      
+      <item>
+    <title>Bayesian Inference</title>
+    <link>https://skripsi-wiki.netlify.app/concepts/fundamental/Bayesian-Inference</link>
+    <guid>https://skripsi-wiki.netlify.app/concepts/fundamental/Bayesian-Inference</guid>
+    <description><![CDATA[ In order to make probability statements about ω given y, we must begin with a model providing a joint probability distribution for ω and y. ]]></description>
+    <pubDate>Tue, 12 May 2026 13:29:01 GMT</pubDate>
+  </item><item>
+    <title>Distribusi_Gibbs</title>
+    <link>https://skripsi-wiki.netlify.app/concepts/fundamental/Distribusi_Gibbs</link>
+    <guid>https://skripsi-wiki.netlify.app/concepts/fundamental/Distribusi_Gibbs</guid>
+    <description><![CDATA[ Distribusi Gibbs (Energy-Based Prior) Distribusi Gibbs merupakan kerangka kerja probabilistik yang menghubungkan konsep energi dari fisika statistik dengan teori peluang. ]]></description>
+    <pubDate>Tue, 12 May 2026 13:29:01 GMT</pubDate>
+  </item><item>
+    <title>Evaluasi_Word_Embedding</title>
+    <link>https://skripsi-wiki.netlify.app/concepts/fundamental/Evaluasi_Word_Embedding</link>
+    <guid>https://skripsi-wiki.netlify.app/concepts/fundamental/Evaluasi_Word_Embedding</guid>
+    <description><![CDATA[ Konsep Fundamental: Evaluasi Kualitas Word Embedding Setelah model word embedding dilatih, sangat penting untuk mengukur seberapa baik representasi vektor tersebut menangkap kedekatan makna (semantik) dan tata bahasa (sintaksis). ]]></description>
+    <pubDate>Tue, 12 May 2026 13:29:01 GMT</pubDate>
+  </item><item>
+    <title>Fungsi_Homogen_Berderajat_Dua</title>
+    <link>https://skripsi-wiki.netlify.app/concepts/fundamental/Fungsi_Homogen_Berderajat_Dua</link>
+    <guid>https://skripsi-wiki.netlify.app/concepts/fundamental/Fungsi_Homogen_Berderajat_Dua</guid>
+    <description><![CDATA[ Sifat Homogen Berderajat Dua &amp; Substitusi Matriks Jacobian Konsep Utama Fungsi Homogen: Sebuah fungsi f(\mathbf{x}) dikatakan homogen berderajat k jika ekuivalensi perbesaran skalanya mematuhi bentuk f(c\mathbf{x}) = c^k f(\mathbf{x}). ]]></description>
+    <pubDate>Tue, 12 May 2026 13:29:01 GMT</pubDate>
+  </item><item>
+    <title>Gaussian_dan_iid</title>
+    <link>https://skripsi-wiki.netlify.app/concepts/fundamental/Gaussian_dan_iid</link>
+    <guid>https://skripsi-wiki.netlify.app/concepts/fundamental/Gaussian_dan_iid</guid>
+    <description><![CDATA[ Distribusi Normal (Gaussian) dan Asumsi i.i.d. ]]></description>
+    <pubDate>Tue, 12 May 2026 13:29:01 GMT</pubDate>
+  </item><item>
+    <title>Improper_Prior</title>
+    <link>https://skripsi-wiki.netlify.app/concepts/fundamental/Improper_Prior</link>
+    <guid>https://skripsi-wiki.netlify.app/concepts/fundamental/Improper_Prior</guid>
+    <description><![CDATA[ Improper Prior Konsep Utama Definisi Improper Prior adalah distribusi probabilitas a priori yang tidak memiliki ukuran luasan (measure) terhingga. ]]></description>
+    <pubDate>Tue, 12 May 2026 13:29:01 GMT</pubDate>
+  </item><item>
+    <title>Integral_Fungsi_Partisi</title>
+    <link>https://skripsi-wiki.netlify.app/concepts/fundamental/Integral_Fungsi_Partisi</link>
+    <guid>https://skripsi-wiki.netlify.app/concepts/fundamental/Integral_Fungsi_Partisi</guid>
+    <description><![CDATA[ Integral Fungsi Partisi (Scaling Trick) Dalam Formulasi_Probabilistik_W2VPred, terdapat sebuah integral kompleks yang muncul saat mendefinisikan konstanta normalisasi untuk distribusi prior Gibbs. ]]></description>
+    <pubDate>Tue, 12 May 2026 13:29:01 GMT</pubDate>
+  </item><item>
+    <title>Matriks_Ko-okurensi_dan_PPMI</title>
+    <link>https://skripsi-wiki.netlify.app/concepts/fundamental/Matriks_Ko-okurensi_dan_PPMI</link>
+    <guid>https://skripsi-wiki.netlify.app/concepts/fundamental/Matriks_Ko-okurensi_dan_PPMI</guid>
+    <description><![CDATA[ Matriks Ko-okurensi dan PPMI Matriks ko-okurensi dan Positive Point-wise Mutual Information (PPMI) merupakan fondasi utama dalam representasi kata berbasis distribusional. ]]></description>
+    <pubDate>Tue, 12 May 2026 13:29:01 GMT</pubDate>
+  </item><item>
+    <title>Negative_Log_Likelihood</title>
+    <link>https://skripsi-wiki.netlify.app/concepts/fundamental/Negative_Log_Likelihood</link>
+    <guid>https://skripsi-wiki.netlify.app/concepts/fundamental/Negative_Log_Likelihood</guid>
+    <description><![CDATA[ Negative Log-Likelihood (NLL) Konsep Utama Likelihood total atas sekumpulan observasi adalah hasil perkalian seluruh probabilitas titik data bersyarat. ]]></description>
+    <pubDate>Tue, 12 May 2026 13:29:01 GMT</pubDate>
+  </item><item>
+    <title>Optimasi_Berbasis_Gradien</title>
+    <link>https://skripsi-wiki.netlify.app/concepts/fundamental/Optimasi_Berbasis_Gradien</link>
+    <guid>https://skripsi-wiki.netlify.app/concepts/fundamental/Optimasi_Berbasis_Gradien</guid>
+    <description><![CDATA[ Konsep Fundamental: Optimasi Berbasis Gradien (Gradient-Based Optimization) Optimasi adalah jantung dari proses pembelajaran ( training) pada machine learning dan deep learning. ]]></description>
+    <pubDate>Tue, 12 May 2026 13:29:01 GMT</pubDate>
+  </item>
     </channel>
   </rss>
