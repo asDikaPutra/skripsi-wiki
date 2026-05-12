@@ -6,64 +6,64 @@
       <description>10 catatan terakhir on Skripsi Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Evaluasi Word Embedding</title>
-    <link>https://skripsi-wiki.netlify.app/concepts/major/Evaluasi_Word_Embedding</link>
-    <guid>https://skripsi-wiki.netlify.app/concepts/major/Evaluasi_Word_Embedding</guid>
-    <description><![CDATA[ Evaluasi Word Embedding Ikhtisar Evaluasi word embedding bertujuan untuk mengukur kualitas representasi vektor yang dihasilkan oleh model seperti Word2Vec, GloVe, FastText, maupun W2VPred dan W2VPred-MAP. ]]></description>
-    <pubDate>Tue, 12 May 2026 13:54:03 GMT</pubDate>
+    <title>Dynamic Word Embeddings (Bamler &amp; Mandt, 2017)</title>
+    <link>https://skripsi-wiki.netlify.app/raw/papers/bamler2017dynamic</link>
+    <guid>https://skripsi-wiki.netlify.app/raw/papers/bamler2017dynamic</guid>
+    <description><![CDATA[ Ringkasan Makalah Dynamic Word Embeddings oleh Bamler dan Mandt (2017) memperkenalkan ekstensi dinamis dari model word embedding statis (seperti Skip-Gram) dengan mengintegrasikan dimensi waktu ke dalam representasi vektor kata. ]]></description>
+    <pubDate>Tue, 12 May 2026 14:04:57 GMT</pubDate>
   </item><item>
-    <title>Algoritma Adam untuk Optimasi W2VPred</title>
-    <link>https://skripsi-wiki.netlify.app/concepts/major/Algoritma_Adam</link>
-    <guid>https://skripsi-wiki.netlify.app/concepts/major/Algoritma_Adam</guid>
-    <description><![CDATA[ Algoritma Adam untuk Optimasi W2VPred Ikhtisar Adam (Adaptive Moment Estimation) diperkenalkan oleh Kingma &amp; Ba (2015) sebagai algoritma optimasi first-order gradient-based yang menggabungkan kelebihan dua metode populer: Momentum (SGD with momentum): mempercepat konvergensi dengan merata-rataka... ]]></description>
+    <title>Multi-Task Learning Using Uncertainty to Weigh Losses (Kendall et al., 2018)</title>
+    <link>https://skripsi-wiki.netlify.app/raw/papers/kendall2018multi</link>
+    <guid>https://skripsi-wiki.netlify.app/raw/papers/kendall2018multi</guid>
+    <description><![CDATA[ Ringkasan Makalah Kendall, Gal, dan Cipolla (2018) mengajukan pendekatan berbasis ketidakpastian untuk menyeimbangkan beberapa fungsi kehilangan (loss functions) dalam multi-task learning (MTL). ]]></description>
+    <pubDate>Tue, 12 May 2026 14:04:57 GMT</pubDate>
+  </item><item>
+    <title>Joint MAP (JMAP) Estimation — Estimasi Simultan Parameter dan Hiperparameter (Mohammad-Djafari, 1996)</title>
+    <link>https://skripsi-wiki.netlify.app/raw/papers/mohammaddjafari1996joint</link>
+    <guid>https://skripsi-wiki.netlify.app/raw/papers/mohammaddjafari1996joint</guid>
+    <description><![CDATA[ Ringkasan Makalah asli Joint Maximum A Posteriori (JMAP) oleh Mohammad-Djafari (1996) mengatasi masalah mendasar dalam inferensi Bayesian: bagaimana memperkirakan parameter dan hiperparameter secara simultan ketika keduanya tidak diketahui. ]]></description>
+    <pubDate>Tue, 12 May 2026 14:04:57 GMT</pubDate>
+  </item><item>
+    <title>Bayesian Inference</title>
+    <link>https://skripsi-wiki.netlify.app/concepts/fundamental/Bayesian-Inference</link>
+    <guid>https://skripsi-wiki.netlify.app/concepts/fundamental/Bayesian-Inference</guid>
+    <description><![CDATA[ In order to make probability statements about ω given y, we must begin with a model providing a joint probability distribution for ω and y. ]]></description>
     <pubDate>Tue, 12 May 2026 13:29:01 GMT</pubDate>
   </item><item>
-    <title>Formulasi Probabilistik W2VPred</title>
-    <link>https://skripsi-wiki.netlify.app/concepts/major/Formulasi_Probabilistik_W2VPred</link>
-    <guid>https://skripsi-wiki.netlify.app/concepts/major/Formulasi_Probabilistik_W2VPred</guid>
-    <description><![CDATA[ Formulasi Probabilistik W2VPred Formulasi probabilistik W2VPred (Word-Embedding-to-Vector Prediction) menurunkan fungsi objektif dari prinsip maximum a posteriori (MAP) dengan mengasumsikan distribusi likelihood dan prior tertentu. ]]></description>
+    <title>Distribusi_Gibbs</title>
+    <link>https://skripsi-wiki.netlify.app/concepts/fundamental/Distribusi_Gibbs</link>
+    <guid>https://skripsi-wiki.netlify.app/concepts/fundamental/Distribusi_Gibbs</guid>
+    <description><![CDATA[ Distribusi Gibbs (Energy-Based Prior) Distribusi Gibbs merupakan kerangka kerja probabilistik yang menghubungkan konsep energi dari fisika statistik dengan teori peluang. ]]></description>
     <pubDate>Tue, 12 May 2026 13:29:01 GMT</pubDate>
   </item><item>
-    <title>Uncertainty-Weighted Loss (Kendall et al., 2018)</title>
-    <link>https://skripsi-wiki.netlify.app/concepts/major/uncertainty_weighted_loss</link>
-    <guid>https://skripsi-wiki.netlify.app/concepts/major/uncertainty_weighted_loss</guid>
-    <description><![CDATA[ Uncertainty-Weighted Loss (Kendall et al., 2018) Ikhtisar Uncertainty-Weighted Loss (UW) diperkenalkan oleh Kendall, Gal, dan Cipolla dalam makalah “Multi-Task Learning Using Uncertainty to Weigh Losses for Scene Geometry and Semantics” (CVPR, 2018). ]]></description>
+    <title>Evaluasi_Word_Embedding</title>
+    <link>https://skripsi-wiki.netlify.app/concepts/fundamental/Evaluasi_Word_Embedding</link>
+    <guid>https://skripsi-wiki.netlify.app/concepts/fundamental/Evaluasi_Word_Embedding</guid>
+    <description><![CDATA[ Konsep Fundamental: Evaluasi Kualitas Word Embedding Setelah model word embedding dilatih, sangat penting untuk mengukur seberapa baik representasi vektor tersebut menangkap kedekatan makna (semantik) dan tata bahasa (sintaksis). ]]></description>
     <pubDate>Tue, 12 May 2026 13:29:01 GMT</pubDate>
   </item><item>
-    <title>BAB2_Outline</title>
-    <link>https://skripsi-wiki.netlify.app/outlines/BAB2_Outline</link>
-    <guid>https://skripsi-wiki.netlify.app/outlines/BAB2_Outline</guid>
-    <description><![CDATA[ Outline BAB 2: Tinjauan Pustaka dan Landasan Teori Berdasarkan fokus penelitian pada optimasi probabilistik W2VPred dan kebutuhan matematis di Bab 3. ]]></description>
+    <title>Fungsi_Homogen_Berderajat_Dua</title>
+    <link>https://skripsi-wiki.netlify.app/concepts/fundamental/Fungsi_Homogen_Berderajat_Dua</link>
+    <guid>https://skripsi-wiki.netlify.app/concepts/fundamental/Fungsi_Homogen_Berderajat_Dua</guid>
+    <description><![CDATA[ Sifat Homogen Berderajat Dua &amp; Substitusi Matriks Jacobian Konsep Utama Fungsi Homogen: Sebuah fungsi f(\mathbf{x}) dikatakan homogen berderajat k jika ekuivalensi perbesaran skalanya mematuhi bentuk f(c\mathbf{x}) = c^k f(\mathbf{x}). ]]></description>
     <pubDate>Tue, 12 May 2026 13:29:01 GMT</pubDate>
   </item><item>
-    <title>BAB4_Outline</title>
-    <link>https://skripsi-wiki.netlify.app/outlines/BAB4_Outline</link>
-    <guid>https://skripsi-wiki.netlify.app/outlines/BAB4_Outline</guid>
-    <description><![CDATA[ Outline BAB 4: Hasil dan Pembahasan Berdasarkan metodologi dan skenario eksperimen yang telah dirancang pada Bab 3, bab ini memaparkan hasil evaluasi model W2VPred-MAP dibandingkan dengan W2VPred baseline. ]]></description>
+    <title>Gaussian_dan_iid</title>
+    <link>https://skripsi-wiki.netlify.app/concepts/fundamental/Gaussian_dan_iid</link>
+    <guid>https://skripsi-wiki.netlify.app/concepts/fundamental/Gaussian_dan_iid</guid>
+    <description><![CDATA[ Distribusi Normal (Gaussian) dan Asumsi i.i.d. ]]></description>
     <pubDate>Tue, 12 May 2026 13:29:01 GMT</pubDate>
   </item><item>
-    <title>Bank_Pertanyaan_Sidang</title>
-    <link>https://skripsi-wiki.netlify.app/preparation/Bank_Pertanyaan_Sidang</link>
-    <guid>https://skripsi-wiki.netlify.app/preparation/Bank_Pertanyaan_Sidang</guid>
-    <description><![CDATA[ Bank Pertanyaan Sidang — W2VPred-MAP Daftar pertanyaan komprehensif untuk persiapan ujian skripsi / sidang. ]]></description>
+    <title>Improper_Prior</title>
+    <link>https://skripsi-wiki.netlify.app/concepts/fundamental/Improper_Prior</link>
+    <guid>https://skripsi-wiki.netlify.app/concepts/fundamental/Improper_Prior</guid>
+    <description><![CDATA[ Improper Prior Konsep Utama Definisi Improper Prior adalah distribusi probabilitas a priori yang tidak memiliki ukuran luasan (measure) terhingga. ]]></description>
     <pubDate>Tue, 12 May 2026 13:29:01 GMT</pubDate>
   </item><item>
-    <title>Jawaban_A_Dasar_Teoretis</title>
-    <link>https://skripsi-wiki.netlify.app/preparation/Jawaban_A_Dasar_Teoretis</link>
-    <guid>https://skripsi-wiki.netlify.app/preparation/Jawaban_A_Dasar_Teoretis</guid>
-    <description><![CDATA[ Jawaban Sidang — Kategori A: Dasar Teoretis Bayesian inference, MAP, JMAP, distribusi Gibbs, MLE, improper prior, fungsi partisi. ]]></description>
-    <pubDate>Tue, 12 May 2026 13:29:01 GMT</pubDate>
-  </item><item>
-    <title>Jawaban_C_Metodologi</title>
-    <link>https://skripsi-wiki.netlify.app/preparation/Jawaban_C_Metodologi</link>
-    <guid>https://skripsi-wiki.netlify.app/preparation/Jawaban_C_Metodologi</guid>
-    <description><![CDATA[ Jawaban Sidang — Kategori C: Metodologi &amp; Desain Eksperimen Ditujukan untuk persiapan ujian skripsi / sidang. ]]></description>
-    <pubDate>Tue, 12 May 2026 13:29:01 GMT</pubDate>
-  </item><item>
-    <title>Jawaban_D_Implementasi_Teknis</title>
-    <link>https://skripsi-wiki.netlify.app/preparation/Jawaban_D_Implementasi_Teknis</link>
-    <guid>https://skripsi-wiki.netlify.app/preparation/Jawaban_D_Implementasi_Teknis</guid>
-    <description><![CDATA[ Jawaban Sidang — Kategori D: Implementasi Teknis 20 Pertanyaan dan Jawaban Lengkap D1. ]]></description>
+    <title>Integral_Fungsi_Partisi</title>
+    <link>https://skripsi-wiki.netlify.app/concepts/fundamental/Integral_Fungsi_Partisi</link>
+    <guid>https://skripsi-wiki.netlify.app/concepts/fundamental/Integral_Fungsi_Partisi</guid>
+    <description><![CDATA[ Integral Fungsi Partisi (Scaling Trick) Dalam Formulasi_Probabilistik_W2VPred, terdapat sebuah integral kompleks yang muncul saat mendefinisikan konstanta normalisasi untuk distribusi prior Gibbs. ]]></description>
     <pubDate>Tue, 12 May 2026 13:29:01 GMT</pubDate>
   </item>
     </channel>
